@@ -1,6 +1,8 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { Gallery, Item } from "react-photoswipe-gallery";
+import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/scss/image-gallery.scss'; // 또는 CSS 파일을 임포트
 
 const tabList = ["Gallery", "Feed"];
 
@@ -78,6 +80,16 @@ const tabListContent = [
   },
 ];
 
+const images = [];
+
+for (let i = 1; i <= 12; i++) {
+  images.push({
+    original: `/img/photos/${i}.jpg`,
+    thumbnail: `/img/photos/${i}.jpg`,
+    description: `Image ${i}`,
+  });
+}
+
 const Photos = () => {
   return (
     <div className="woongshmello_section" id="photos" >
@@ -105,9 +117,16 @@ const Photos = () => {
 
                 <div className="photo_list has-effect">
                   <Gallery>
-                    {/* <TabPanel key={0}>
+                    <TabPanel key={0}>
+                      <div className="image-gallery-container">
+                        <ImageGallery
+                          items={images}
+                          showBullets={true}
+                          showIndex={true}
 
-                    </TabPanel> */}
+                        />
+                      </div>
+                    </TabPanel>
                     <TabPanel key={1}>
                       <ul className="gallery_zoom">
                         {tabListContent.map((item, i) => (

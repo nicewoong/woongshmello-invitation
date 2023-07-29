@@ -1070,6 +1070,34 @@ body.loaded .overlay_effect:after {
   align-items: flex-end;
 }
 
+.image-gallery-container {
+  width: 100%;
+  /* 갤러리 컨테이너의 너비 설정 */
+}
+
+/* 이미지 높이를 원하는 높이로 설정 */
+.image-gallery-image {
+  height: 90vh;
+  /* 원하는 높이로 설정 */
+  object-fit: cover;
+  /* 이미지 비율 유지하며 채우기 */
+}
+
+/* 전체 화면 모드일 때 이미지 스타일 */
+.image-gallery-container.fullscreen .image-gallery-image {
+  height: 100vh;
+  /* 전체 화면 높이로 설정 */
+}
+
+
+/* 썸네일 이미지 스타일 */
+.image-gallery-thumbnail img {
+  // width: auto; /* 너비를 자동으로 조정하여 비율 유지 */
+  height: 10vh; /* 썸네일 높이를 100px로 고정 */
+  object-fit: cover;
+}
+
+
 .woongshmello_photos .photo_filter ul {
   margin: 0px;
   list-style-type: none;
