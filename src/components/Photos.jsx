@@ -6,68 +6,76 @@ const tabList = ["Gallery", "Feed"];
 
 const tabListContent = [
   {
-    porftoliItems: [
-      {
-        img: "/img/photos/22.jpg",
-        title: "sample Design",
-        meta: "Design",
-        portfolioLink:
-          "https://dribbble.com/shots/16529282-sample-Personal-Portfolio-React-Template",
-      },
-      {
-        img: "/img/photos/7.jpg",
-        title: " Sweet Cherry",
-        meta: "Photography",
-        portfolioLink:
-          "https://dribbble.com/shots/16529226-Krozo-Personal-Portfolio-React-Template",
-      },
-    ],
+    img: "/img/photos/1.jpg",
+    title: " My Story",
+    meta: "Design",
+    portfolioLink: "/",
   },
   {
-    porftoliItems: [
-      {
-        img: "/img/photos/1.jpg",
-        title: " My Story",
-        meta: "Design",
-        portfolioLink: "https://www.instagram.com/",
-      },
-      {
-        img: "/img/photos/2.jpg",
-        title: "Design Trend",
-        meta: "Branding",
-        portfolioLink:
-          "https://dribbble.com/shots/16545341-Imroz-Vue-JS-Creative-Agency-Portfolio-Template",
-      },
-      {
-        img: "/img/photos/14.jpg",
-        title: "Soft Cream",
-        meta: "Photography",
-        portfolioLink:
-          "https://dribbble.com/shots/16529407-Deski-Saas-Software-React-Template",
-      },
-      {
-        img: "/img/photos/22.jpg",
-        title: "sample Design",
-        meta: "Design",
-        portfolioLink:
-          "https://dribbble.com/shots/16529282-sample-Personal-Portfolio-React-Template",
-      },
-      {
-        img: "/img/photos/7.jpg",
-        title: " Sweet Cherry",
-        meta: "Photography",
-        portfolioLink:
-          "https://dribbble.com/shots/16529226-Krozo-Personal-Portfolio-React-Template",
-      },
-      {
-        img: "/img/photos/3.jpg",
-        title: "Behance Shoot",
-        meta: "Branding",
-        portfolioLink: "https://www.behance.net/ib-themes",
-      },
-    ],
+    img: "/img/photos/2.jpg",
+    title: "Design Trend",
+    meta: "Branding",
+    portfolioLink: "/",
   },
-
+  {
+    img: "/img/photos/3.jpg",
+    title: "Soft Cream",
+    meta: "Photography",
+    portfolioLink: "/",
+  },
+  {
+    img: "/img/photos/4.jpg",
+    title: "sample Design",
+    meta: "Design",
+    portfolioLink: "/",
+  },
+  {
+    img: "/img/photos/5.jpg",
+    title: " Sweet Cherry",
+    meta: "Photography",
+    portfolioLink: "/",
+  },
+  {
+    img: "/img/photos/6.jpg",
+    title: "Behance Shoot",
+    meta: "Branding",
+    portfolioLink: "/",
+  }, {
+    img: "/img/photos/7.jpg",
+    title: " My Story",
+    meta: "Design",
+    portfolioLink: "/",
+  },
+  {
+    img: "/img/photos/8.jpg",
+    title: "Design Trend",
+    meta: "Branding",
+    portfolioLink: "/",
+  },
+  {
+    img: "/img/photos/9.jpg",
+    title: "Soft Cream",
+    meta: "Photography",
+    portfolioLink: "/",
+  },
+  {
+    img: "/img/photos/10.jpg",
+    title: "sample Design",
+    meta: "Design",
+    portfolioLink: "/",
+  },
+  {
+    img: "/img/photos/11.jpg",
+    title: " Sweet Cherry",
+    meta: "Photography",
+    portfolioLink: "/",
+  },
+  {
+    img: "/img/photos/12.jpg",
+    title: "Behance Shoot",
+    meta: "Branding",
+    portfolioLink: "/",
+  },
 ];
 
 const Photos = () => {
@@ -97,53 +105,54 @@ const Photos = () => {
 
                 <div className="photo_list has-effect">
                   <Gallery>
-                    {tabListContent.map((tabContent, i) => (
-                      <TabPanel key={i}>
-                        <ul className="gallery_zoom">
-                          {tabContent.porftoliItems.map((val, i) => (
-                            <li
-                              key={i}
-                              data-aos="fade-right"
-                              data-aos-duration="1200"
-                              data-aos-delay={val.delayAnimation}
-                            >
-                              <div className="inner">
-                                <div className="entry woongshmello_photos_animation_wrap">
-                                  <Item
-                                    original={val.img}
-                                    thumbnail={val.img}
-                                    width={1000}
-                                    height={1000}
-                                  >
-                                    {({ ref, open }) => (
-                                      <img
-                                        src={val.img}
-                                        alt="portfolio"
-                                        role="button"
-                                        ref={ref}
-                                        onClick={open}
-                                      />
-                                    )}
-                                  </Item>
-                                </div>
-                                <div className="mobile_title">
-                                  <h3>
-                                    <a
-                                      href={val.portfolioLink}
-                                      rel="noopener noreferrer"
-                                      target="_blank"
-                                    >
-                                      {val.title}
-                                    </a>
-                                  </h3>
-                                  <span>{val.meta}</span>
-                                </div>
+                    {/* <TabPanel key={0}>
+
+                    </TabPanel> */}
+                    <TabPanel key={1}>
+                      <ul className="gallery_zoom">
+                        {tabListContent.map((item, i) => (
+                          <li
+                            key={i}
+                            data-aos="fade-right"
+                            data-aos-duration="1200"
+                            data-aos-delay={item.delayAnimation}
+                          >
+                            <div className="inner">
+                              <div className="entry woongshmello_photos_animation_wrap">
+                                <Item
+                                  original={item.img}
+                                  thumbnail={item.img} // 추후 썸네일폴더 따로 만들기 
+                                  width={'1000px'}
+                                  style={{ objectFit: "contain" }}
+                                >
+                                  {({ ref, open }) => (
+                                    <img
+                                      src={item.img}
+                                      alt="portfolio"
+                                      role="button"
+                                      ref={ref}
+                                      onClick={open}
+                                    />
+                                  )}
+                                </Item>
                               </div>
-                            </li>
-                          ))}
-                        </ul>
-                      </TabPanel>
-                    ))}
+                              <div className="mobile_title">
+                                <h3>
+                                  <a
+                                    href={item.portfolioLink}
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                                  >
+                                    {item.title}
+                                  </a>
+                                </h3>
+                                <span>{item.meta}</span>
+                              </div>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </TabPanel>
                   </Gallery>
                   {/* End tabpanel */}
                 </div>
