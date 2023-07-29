@@ -45,3 +45,24 @@ yarn-error.log*
 
 # Windows specific files
 Thumbs.db
+
+
+# Firebase
+firebase.json
+firebase-debug.log
+firebase.json
+.firebaserc
+.firestore.rules
+.firestore.indexes.json
+
+# Firebase Emulator
+firebase-emulator
+
+# Firebase SDK
+node_modules/
+firebase/
+.firebaserc
+
+# Firebase Functions (Optional: If you use Firebase Functions)
+functions/node_modules/
+functions/.env
