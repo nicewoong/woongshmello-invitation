@@ -2,7 +2,6 @@
 /node_modules
 /.pnp
 .pnp.js
-
 # Compiled output
 /build
 /dist
