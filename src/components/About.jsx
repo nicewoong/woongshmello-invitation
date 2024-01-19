@@ -1,6 +1,13 @@
 import React from "react";
 
 const About = () => {
+
+  const handleKakaoMapOpen = () => {
+    const address = "서울 서초구 서초대로74길 11";
+    const url = "https://map.kakao.com/link/search/" + encodeURIComponent(address);
+    window.open(url, '_blank');
+  };
+
   return (
     <>
       <div className="woongshmello_section" id="about">
@@ -17,7 +24,7 @@ const About = () => {
 
                   <div
                     className="main"
-                    style={{ backgroundImage: "url(img/about/2-1.jpg)" }}
+                    style={{ backgroundImage: "url(img/about/1-1.jpg)" }}
                   ></div>
                 </div>
                 {/* End image */}
@@ -31,7 +38,7 @@ const About = () => {
                   data-aos-duration="1200"
                 >
                   <span>Invitation</span>
-                  <h3>We sincerely invite you.</h3>
+                  <h3>Join the Festivities!</h3>
                 </div>
                 <div
                   className="text"
@@ -39,22 +46,29 @@ const About = () => {
                   data-aos-duration="1200"
                   style={{ padding: "10px" }}
                 >
-                  <p>06월 30일, 우리는 처음으로 마주한 날이었죠. 그 후로 3년이라는 시간이 흘렀고, 우리의 사랑은 더욱 깊어져 결심을 하게 되었습니다.
-                  이제 우리는 서로의 인생을 함께하고자 합니다. 결혼식은 삼성전자 서초사옥에서 소중한 가족과 친구들 앞에서 소박하게 진행될 예정입니다.
-                  저희의 결혼식에 함께해주시길 진심으로 바라며, 당일을 함께해주실 수 없는 분들에게도 따뜻한 축하와 기도를 부탁드립니다. 이 날이 저희 둘에게 뜻깊고 아름다운 날이 되도록 많은 사랑과 축복 부탁드립니다.</p>
-                  <br/>
-                  <p>한준식＊김태경 의 子 웅제</p>
-                  <p>권경택＊김은화 의 女 은경</p>
-                  <p>일시 : 24년 06월 30일 일요일 오전 11시</p>
-                  <p>장소 : 삼성전자 서초사옥 </p>
+                  <p><strong>웅</strong>장한 &nbsp;&nbsp;사랑의 &nbsp; 축제가 &nbsp;시작돼</p>
+                  <p><strong>제</strong>일 소중한 존재로 &nbsp;서로가 만나</p>
+                  <p><strong>은</strong>은한 미소로 &nbsp;물들어가는 &nbsp;순간</p>
+                  <p><strong>경</strong>건한 &nbsp;약속, &nbsp;&nbsp;우리의 &nbsp;결혼식 날</p>
+                  <br />
+                  <p>웅제와 은경이가 결혼합니다!</p>
+                  <p>늘 곁에서 아껴주셨던 고마운 분들을 모십니다.</p>
+                  <p>당신이 없으면 시작을 못해요!😍</p>
+                  <hr style={{ width: '20%', margin: '20px 5px' }} />
+                  <p><strong>한준식＊김태경</strong> 의 아들 <strong>한웅제</strong></p>
+                  <p><strong>권경택＊김은화</strong> 의 &nbsp;&nbsp;&nbsp;&nbsp;딸 <strong>권은경</strong></p>
+                  <br />
+                  <p>2024년 6월 30일 일요일 오전 11시</p>
+                  <p>삼성전자 서초사옥 5층 (강남역 8번 출구앞)</p>
+                  <p>서울 서초구 서초대로74길 11 삼성전자빌딩</p>
                 </div>
                 <div
                   className="shane_tm_button"
                   data-aos="fade-up"
                   data-aos-duration="1200"
                 >
-                  <a href="/">
-                    Way to come
+                  <a href="#" onClick={(e) => { e.preventDefault(); handleKakaoMapOpen(); }}>
+                    오시는길
                   </a>
                 </div>
               </div>
