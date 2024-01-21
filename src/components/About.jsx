@@ -2,11 +2,12 @@ import React from "react";
 
 const About = () => {
 
-  const handleKakaoMapOpen = () => {
+  const handleNaverMapOpen = () => {
     const address = "서울 서초구 서초대로74길 11";
-    const url = "https://map.kakao.com/link/search/" + encodeURIComponent(address);
+    const url = "https://map.naver.com/v5/search/" + encodeURIComponent(address);
     window.open(url, '_blank');
   };
+  
 
   return (
     <>
@@ -67,7 +68,7 @@ const About = () => {
                   data-aos="fade-up"
                   data-aos-duration="1200"
                 >
-                  <a href="#" onClick={(e) => { e.preventDefault(); handleKakaoMapOpen(); }}>
+                  <a href="#" onClick={(e) => { e.preventDefault(); handleNaverMapOpen(); }}>
                     오시는길
                   </a>
                 </div>
